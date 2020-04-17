@@ -25,7 +25,7 @@ include('jobs.php');
   <div class="container">
     <div id="resume-header" class="row">
       <div class="col-3">
-        <img id="profile-picture" src="images/sebas.jpg" alt="">
+        <img id="profile-picture" src="images/sebastian.jpg" alt="">
       </div>
       <div class="col">
         <h1><?php echo "$name"; ?> </h1>
