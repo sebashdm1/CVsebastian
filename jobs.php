@@ -1,10 +1,8 @@
 <?php 
 
-require 'app/models/job.php';
-require 'app/models/project.php';
-require_once 'app/models/Printable.php';
+require_once 'vendor/autoload.php';
 
-
+use app\models\{job,project,Printable};
 
 $job1 = new Job('PHP Developer','Esto es una descripcion usando un multiarray en php.');
 $job1->months = 16;
@@ -21,15 +19,16 @@ $project1 = new project('Project 1', 'Esta es la descripcion del proceso 1');
 
 $jobs = [ //arreglo de objetos de tipo Job.
 
-  $job1,
-  $job2,
-  $job3
+	  $job1,
+	  $job2,
+	  $job3
 
   ];
 
 $projects = [
     
-    $project1
+      $project1
+
 ];
 
 	
