@@ -2,8 +2,7 @@
 
 interface Printable {
 
-public function getDescription(){
-
-}
+		public function getDescription();
+		
 
 }

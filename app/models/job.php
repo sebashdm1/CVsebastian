@@ -2,7 +2,9 @@
 
 require_once 'app/models/baseElement.php';
 
- class job extends baseElement{
+
+
+ class job extends baseElement {
 
  	public function __construct($title , $description){
  			$newTitle= 'Job: '.$title;
@@ -20,6 +22,8 @@ require_once 'app/models/baseElement.php';
 		}else{
 		return "Job Duration: $years years $extraMonths  months";
        }
+
+    
    }
 
  }

@@ -1,6 +1,11 @@
 <?php
-class baseElement{
-	private  $title;
+
+require_once 'app/models/Printable.php';
+
+
+
+class baseElement implements Printable{
+	private $title;
 	public  $description;
 	public  $visible = true;
 	public  $months;
@@ -10,8 +15,6 @@ class baseElement{
             $this->description = $description;
 
    }
-
-
 
 	public function getTitle(){
        return $this->title;
@@ -36,5 +39,13 @@ class baseElement{
 		return " $years years $extraMonths  months";
        }
    }
+
+    public function getDescription(){
+
+       	  return $this->description;
+
+       }
+
+
 
 }

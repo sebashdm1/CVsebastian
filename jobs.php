@@ -2,6 +2,8 @@
 
 require 'app/models/job.php';
 require 'app/models/project.php';
+require_once 'app/models/Printable.php';
+
 
 
 $job1 = new Job('PHP Developer','Esto es una descripcion usando un multiarray en php.');
@@ -17,54 +19,21 @@ $project1 = new project('Project 1', 'Esta es la descripcion del proceso 1');
 
 
 
-$jobs=[ //arreglo de objetos de tipo Job.
+$jobs = [ //arreglo de objetos de tipo Job.
 
   $job1,
   $job2,
   $job3
 
-	/*[
-		'title'=>'php Developer',
-		'description' => 'Esto es una descripcion usando un multiarray en php.',
-		'visible' => true,
-		'months' => 16
-	],
-	[
-		'title'=>'Python Dev',
-		'description' => 'Esto es una descripcion usando un multiarray en php.',
-		'visible' => false,
-		'months' => 14
-	],
-	[
-		'title'=>'Devops',
-	    'description' => 'Esto es una descripcion usando un multiarray en php.',
-	    'visible' => true,
-		'months' => 5
-	],
-	[
-		'title'=>'Node Dev',
-	    'description' => 'Esto es una descripcion usando un multiarray en php.',
-	    'visible' => false,
-		'months' => 24
-	],
-	[
-		'title'=>'Frontend Dev',
-	    'description' => 'Esto es una descripcion usando un multiarray en php.',
-	    'visible' => true,
-		'months' => 3
-	]*/
-];
+  ];
 
-$projects= [
+$projects = [
     
     $project1
-
 ];
 
-
-
-
-function PrintElement($job){
+	
+function PrintElement(Printable $job){
 
 	 if($job->visible == false){
             return;	
@@ -72,7 +41,7 @@ function PrintElement($job){
 
 	  echo  '<li class="work-position">';
 	              echo  '<h5>'.$job->getTitle() .'</h5>';
-	              echo  '<p>' .$job->description.'</p>';
+	              echo  '<p>' .$job->getDescription().'</p>';
 	              echo  '<p>' .$job->getDurationAsString().'</p>';
 	              echo  '<strong>Achievements: </strong>';
 	              echo  '<ul> ';
