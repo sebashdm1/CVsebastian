@@ -1,17 +1,12 @@
 <?php
 
 namespace app\models;
-require_once 'app/models/baseElement.php';
+use Illuminate\Database\Eloquent\Model;	
 
+ class job extends Model  {
+ 	protected $table = 'jobs';
 
-
- class job extends baseElement {
-
- 	public function __construct($title , $description){
- 			$newTitle= 'Job: '.$title;
- 			parent::__construct($newTitle , $description);
-
- 		}
+ 
 
  	public function getDurationAsString(){
 
@@ -19,9 +14,9 @@ require_once 'app/models/baseElement.php';
 		$extraMonths = $this->months % 12;
 
 		if($years==0){
-			return "$extraMonths  months";
-		}else{
-		return "Job Duration: $years years $extraMonths  months";
+			return "Job duration:  $extraMonths  months";
+		}else if($years != 0){
+		    return "Job Duration: $years years $extraMonths  months";
        }
 
     
