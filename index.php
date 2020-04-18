@@ -20,7 +20,7 @@ include('jobs.php');
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="public/css/style.css">
 
   <title>Resume</title>
 </head>
@@ -29,7 +29,7 @@ include('jobs.php');
   <div class="container">
     <div id="resume-header" class="row">
       <div class="col-3">
-        <img id="profile-picture" src="../images/sebastian.jpg" alt="">
+        <img id="profile-picture" src="public/images/sebastian.jpg" alt="">
       </div>
       <div class="col">
         <h1><?php echo "$name"; ?> </h1>

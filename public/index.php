@@ -6,6 +6,7 @@ error_reporting(E_ALL); //...............PARA INICIALIZAR ERRORES !!
 
 require_once '../vendor/autoload.php';
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Aura\Router\RouterContainer;
 
 $capsule = new Capsule;
 $capsule->addConnection([
@@ -22,13 +23,33 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-$route = $_GET['route'] ?? '/'; //?? significa que pregunta si route esta definido y tiene un valor, si no agrega lo que sigue en este caso '/' la barra
+$request = Laminas\Diactoros\ServerRequestFactory::fromGlobals( // implementacion de diactoros para las peticiones
+    $_SERVER,
+    $_GET,
+    $_POST,
+    $_COOKIE,
+    $_FILES
+);
 
-if ($route == '/'){
-	require '../index.php';
-}elseif ($route == 'addJob'){
-	require '../addJob.php';
+
+
+$routerContainer = new RouterContainer();
+$map = $routerContainer->getMap();
+$map->get('index','/Proyecto_php/','../index.php');
+$map->get('addJobs','/Proyecto_php/jobs/add','../addJobs.php');
+
+$matcher = $routerContainer->getMatcher();
+$route = $matcher->match($request);
+
+if(!$route){
+    echo 'No Found';
+}else{
+    require $route->handler;
 }
+
+
+
+
 
 
 
