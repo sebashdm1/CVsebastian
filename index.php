@@ -1,27 +1,8 @@
 
 <?php 
-require_once 'vendor/autoload.php';
-
-use Illuminate\Database\Capsule\Manager as Capsule;
 use app\models\job;
 use app\models\project;
 
-
-$capsule = new Capsule;
-
-$capsule->addConnection([
-    'driver'    => 'mysql',
-    'host'      => 'localhost',
-    'database'  => 'portafoliodb',
-    'username'  => 'root',
-    'password'  => '',
-    'charset'   => 'utf8',
-    'collation' => 'utf8_unicode_ci',
-    'prefix'    => '',
-]);
-
-$capsule->setAsGlobal();
-$capsule->bootEloquent();
 
 
 $name='Sebastián Hernández Caro';

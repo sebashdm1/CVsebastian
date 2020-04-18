@@ -1,27 +1,7 @@
 <?php
 //Variables super globales
 //var_dump($_GET); // var_dump codigo que se ejecuta en el servidor!
-require_once 'vendor/autoload.php';
-
-use Illuminate\Database\Capsule\Manager as Capsule;
 use app\models\job;
-
-$capsule = new Capsule;
-
-$capsule->addConnection([
-    'driver'    => 'mysql',
-    'host'      => 'localhost',
-    'database'  => 'portafoliodb',
-    'username'  => 'root',
-    'password'  => '',
-    'charset'   => 'utf8',
-    'collation' => 'utf8_unicode_ci',
-    'prefix'    => '',
-]);
-
-
-$capsule->setAsGlobal();
-$capsule->bootEloquent();
 
 if(!empty($_POST)){
 
