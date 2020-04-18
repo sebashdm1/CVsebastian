@@ -32,10 +32,13 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals( // implementacio
 );
 
 
-
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
-$map->get('index','/Proyecto_php/','../index.php');
+$map->get('index','/Proyecto_php/',[
+    'controller'=> 'app\Controllers\IndexController',
+    'action' => 'indexAction'
+]);
+
 $map->get('addJobs','/Proyecto_php/jobs/add','../addJobs.php');
 
 $matcher = $routerContainer->getMatcher();
@@ -44,7 +47,13 @@ $route = $matcher->match($request);
 if(!$route){
     echo 'No Found';
 }else{
-    require $route->handler;
+    $handlerData = $route->handler;
+    $controllerName = $handlerData['controller'];
+    $actionName = $handlerData['action'];
+
+    $controller = new  $controllerName;
+    $controller->indexAction();
+    
 }
 
 
