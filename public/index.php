@@ -22,10 +22,15 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-$route = $_GET['route'] ?? '';
-if($route == '/'){
+$route = $_GET['route'] ?? '/'; //?? significa que pregunta si route esta definido y tiene un valor, si no agrega lo que sigue en este caso '/' la barra
+
+if ($route == '/'){
 	require '../index.php';
 }elseif ($route == 'addJob'){
 	require '../addJob.php';
 }
 
+
+
+
+	
