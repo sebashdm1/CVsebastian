@@ -4,7 +4,7 @@ namespace app\Controllers;
 use app\models\project;
 
 
- class ProjectsController
+ class ProjectsController  extends BaseController
 {
 	
 	public function getAddProjectsAction($request)
@@ -20,7 +20,7 @@ use app\models\project;
 			}
 
 
-		include '../views/addProject.php';
+		echo $this->renderHTML('addProject.twig');
 	
 		
 	}
