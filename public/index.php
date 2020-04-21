@@ -50,6 +50,17 @@ $map->post('addJobs','/Proyecto_php/jobs/add',[
 ]);
 
 
+$map->get('saveProjects','/Proyecto_php/projects/add',[
+    'controller'=> 'app\Controllers\ProjectsController',
+    'action' => 'getAddProjectsAction'
+]);
+
+$map->post('addProjects','/Proyecto_php/projects/add',[
+    'controller'=> 'app\Controllers\ProjectsController',
+    'action' => 'getAddProjectsAction'
+]);
+
+
 
 
 
