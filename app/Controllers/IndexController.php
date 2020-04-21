@@ -21,7 +21,8 @@ class IndexController extends BaseController
 
 		return $this->renderHTML('index.twig',[
 			'name' => $name,
-			'jobs' => $jobs
+			'jobs' => $jobs,
+			'projects' => $projects
 		]);
 	}
 }
