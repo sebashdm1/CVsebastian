@@ -1,14 +1,4 @@
 
-<?php 
-use app\models\job;
-use app\models\project;
-
-
-
-$name='Sebastián Hernández Caro';
-$limitMonths = 240 ;
-include('jobs.php');
-?>
 
 <!doctype html>
 <html lang="en">

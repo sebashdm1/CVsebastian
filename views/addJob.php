@@ -1,21 +1,4 @@
-<?php
-//Variables super globales
-//var_dump($_GET); // var_dump codigo que se ejecuta en el servidor!
-use app\models\job;
 
-if(!empty($_POST)){
-
-$job = new job();
-$job->title = $_POST["txt_title"];
-$job->Description = $_POST["txt_description"];
-$job->Save();
-
-}
-
-
-
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -27,7 +10,7 @@ $job->Save();
 </head>
 <body>
         <h1>Add Job</h1>
-       <form action="addJob.php" method="POST">
+       <form action="/Proyecto_php/jobs/add" method="POST">
        	   <label>Title: </label>
        	   <input type="text" name="txt_title"><br>
        	   <label>Description: </label>
