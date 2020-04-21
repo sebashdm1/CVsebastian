@@ -22,7 +22,7 @@
         <img id="profile-picture" src="public/images/sebastian.jpg" alt="">
       </div>
       <div class="col">
-        <h1><?php echo "$name"; ?> </h1>
+        <h1>{{name}}</h1>
         <h2>Junior Developer</h2>
         <ul>
           <li>Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe969b9d8a918cbe939f9792d09d9193">[email&#160;protected]</a></li>
@@ -46,22 +46,15 @@
         <div>
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
-            <?php 
-             $totalMonths = 0;
-            for ($i=0; $i <count($jobs); $i++) {
-              $totalMonths+= $jobs[$i]->months;
-            	
-            	 if($totalMonths>$limitMonths){
-            	 	break; // termina el ciclo y se sale sin importar la condicion del for
-            	 }
+                   <ul>
+                      {% for job in jobs %}
+                     <li class="work-position"> 
+                         <h5>{{ job.title }} </h5>
+                         <p> {{ job.description }} </p>
+                     </li>
+                      {% endfor %}
+                  </ul>
 
-            	// if($jobs[$i]['visible']==false){
-            	//  	continue; // hasta ca llega esta iteracion, continua con la siguiente iteracion
-            	//  }
-
-            	PrintElement($jobs[$i]);
-            }
-            ?>
           </ul>
         </div>
         <div>
