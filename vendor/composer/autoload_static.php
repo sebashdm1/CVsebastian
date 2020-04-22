@@ -54,6 +54,10 @@ class ComposerStaticInit0045ee479daad52b3a0025551a408ab9
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
         ),
+        'R' => 
+        array (
+            'Respect\\Validation\\' => 19,
+        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
@@ -131,6 +135,10 @@ class ComposerStaticInit0045ee479daad52b3a0025551a408ab9
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Respect\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/respect/validation/library',
         ),
         'Psr\\SimpleCache\\' => 
         array (

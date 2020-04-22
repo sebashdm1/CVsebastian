@@ -125,17 +125,17 @@
     },
     {
         "name": "illuminate/container",
-        "version": "v7.6.2",
-        "version_normalized": "7.6.2.0",
+        "version": "v7.7.1",
+        "version_normalized": "7.7.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/container.git",
-            "reference": "10c5802e360595f5f2a8b6afa176b9542851e580"
+            "reference": "aa8dfe90a3eb31dc760adc911647be5d2e129c8a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/container/zipball/10c5802e360595f5f2a8b6afa176b9542851e580",
-            "reference": "10c5802e360595f5f2a8b6afa176b9542851e580",
+            "url": "https://api.github.com/repos/illuminate/container/zipball/aa8dfe90a3eb31dc760adc911647be5d2e129c8a",
+            "reference": "aa8dfe90a3eb31dc760adc911647be5d2e129c8a",
             "shasum": ""
         },
         "require": {
@@ -143,7 +143,7 @@
             "php": "^7.2.5",
             "psr/container": "^1.0"
         },
-        "time": "2020-04-06T13:33:36+00:00",
+        "time": "2020-04-20T14:17:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -167,16 +167,12 @@
             }
         ],
         "description": "The Illuminate Container package.",
-        "homepage": "https://laravel.com",
-        "support": {
-            "issues": "https://github.com/laravel/framework/issues",
-            "source": "https://github.com/laravel/framework"
-        }
+        "homepage": "https://laravel.com"
     },
     {
         "name": "illuminate/contracts",
-        "version": "v7.6.2",
-        "version_normalized": "7.6.2.0",
+        "version": "v7.7.1",
+        "version_normalized": "7.7.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/contracts.git",
@@ -217,25 +213,21 @@
             }
         ],
         "description": "The Illuminate Contracts package.",
-        "homepage": "https://laravel.com",
-        "support": {
-            "issues": "https://github.com/laravel/framework/issues",
-            "source": "https://github.com/laravel/framework"
-        }
+        "homepage": "https://laravel.com"
     },
     {
         "name": "illuminate/database",
-        "version": "v7.6.2",
-        "version_normalized": "7.6.2.0",
+        "version": "v7.7.1",
+        "version_normalized": "7.7.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/database.git",
-            "reference": "2bfb896f341cb87bf417e1fb4cfdf0c2d1e36e1e"
+            "reference": "09f313bf5273cb2770b6863600c7f66c56a15b19"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/database/zipball/2bfb896f341cb87bf417e1fb4cfdf0c2d1e36e1e",
-            "reference": "2bfb896f341cb87bf417e1fb4cfdf0c2d1e36e1e",
+            "url": "https://api.github.com/repos/illuminate/database/zipball/09f313bf5273cb2770b6863600c7f66c56a15b19",
+            "reference": "09f313bf5273cb2770b6863600c7f66c56a15b19",
             "shasum": ""
         },
         "require": {
@@ -255,7 +247,7 @@
             "illuminate/pagination": "Required to paginate the result set (^7.0).",
             "symfony/finder": "Required to use Eloquent model factories (^5.0)."
         },
-        "time": "2020-04-14T14:11:33+00:00",
+        "time": "2020-04-21T18:52:32+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -285,25 +277,21 @@
             "laravel",
             "orm",
             "sql"
-        ],
-        "support": {
-            "issues": "https://github.com/laravel/framework/issues",
-            "source": "https://github.com/laravel/framework"
-        }
+        ]
     },
     {
         "name": "illuminate/support",
-        "version": "v7.6.2",
-        "version_normalized": "7.6.2.0",
+        "version": "v7.7.1",
+        "version_normalized": "7.7.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/support.git",
-            "reference": "b6f64a42377f86b293960e0b7f6920ae59e578d2"
+            "reference": "7143690b5b718a4a89f8a1ecda79833e75dd138c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/support/zipball/b6f64a42377f86b293960e0b7f6920ae59e578d2",
-            "reference": "b6f64a42377f86b293960e0b7f6920ae59e578d2",
+            "url": "https://api.github.com/repos/illuminate/support/zipball/7143690b5b718a4a89f8a1ecda79833e75dd138c",
+            "reference": "7143690b5b718a4a89f8a1ecda79833e75dd138c",
             "shasum": ""
         },
         "require": {
@@ -326,7 +314,7 @@
             "symfony/var-dumper": "Required to use the dd function (^5.0).",
             "vlucas/phpdotenv": "Required to use the Env class and env helper (^4.0)."
         },
-        "time": "2020-04-15T19:48:40+00:00",
+        "time": "2020-04-21T15:58:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -353,11 +341,7 @@
             }
         ],
         "description": "The Illuminate Support package.",
-        "homepage": "https://laravel.com",
-        "support": {
-            "issues": "https://github.com/laravel/framework/issues",
-            "source": "https://github.com/laravel/framework"
-        }
+        "homepage": "https://laravel.com"
     },
     {
         "name": "laminas/laminas-diactoros",
@@ -805,6 +789,71 @@
             "MIT"
         ],
         "description": "Common interfaces for simple caching"
+    },
+    {
+        "name": "respect/validation",
+        "version": "1.1.31",
+        "version_normalized": "1.1.31.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Respect/Validation.git",
+            "reference": "45d109fc830644fecc1145200d6351ce4f2769d0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Respect/Validation/zipball/45d109fc830644fecc1145200d6351ce4f2769d0",
+            "reference": "45d109fc830644fecc1145200d6351ce4f2769d0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4",
+            "symfony/polyfill-mbstring": "^1.2"
+        },
+        "require-dev": {
+            "egulias/email-validator": "~1.2 || ~2.1",
+            "mikey179/vfsstream": "^1.5",
+            "phpunit/phpunit": "~4.0 || ~5.0",
+            "symfony/validator": "~2.6.9",
+            "zendframework/zend-validator": "~2.3"
+        },
+        "suggest": {
+            "egulias/email-validator": "Strict (RFC compliant) email validation",
+            "ext-bcmath": "Arbitrary Precision Mathematics",
+            "ext-mbstring": "Multibyte String Functions",
+            "friendsofphp/php-cs-fixer": "Fix PSR2 and other coding style issues",
+            "symfony/validator": "Use Symfony validator through Respect\\Validation",
+            "zendframework/zend-validator": "Use Zend Framework validator through Respect\\Validation"
+        },
+        "time": "2019-05-28T06:10:06+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Respect\\Validation\\": "library/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Respect/Validation Contributors",
+                "homepage": "https://github.com/Respect/Validation/graphs/contributors"
+            }
+        ],
+        "description": "The most awesome validation engine ever created for PHP",
+        "homepage": "http://respect.github.io/Validation/",
+        "keywords": [
+            "respect",
+            "validation",
+            "validator"
+        ]
     },
     {
         "name": "symfony/console",
