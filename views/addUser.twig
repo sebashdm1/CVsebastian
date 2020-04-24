@@ -1,0 +1,28 @@
+
+{% extends "mainTemplate.twig" %}
+
+{% block content %}
+  <h1>Add User</h1>
+   
+   {% if responseMessage != null %}
+   <div class="alert alert-primary" role="alert">
+           {{responseMessage}}
+   </div>
+  {% endif %}
+
+       <form action="/Proyecto_php/users/add" method="POST">
+           <label>Cedula: </label>
+           <input type="text" name="txt_cedula"><br>
+           <label>Nombre usuario: </label>
+           <input type="text" name="txt_nomUser"><br>
+            <label>Email: </label>
+           <input type="email" name="txt_email"><br>
+            <label>Contraseña: </label>
+           <input type="password" name="txt_password"><br>
+           
+           <button type="submit">Save</button>
+
+       </form>  
+{% endblock %}
+
+

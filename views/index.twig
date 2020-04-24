@@ -36,8 +36,17 @@
                      <li class="work-position"> 
                          <h5>{{ job.title }} </h5>
                          <p> {{ job.description }} </p>
-                     </li>
-                      {% endfor %}
+                    
+                  
+
+                      {% if job.fileName == '' %}
+                           <h5>No image founded :/</h5>
+                      {% else %}
+                           <img src="uploads/{{ job.fileName }}" alt="image"style=" width:120px; heigh:90px;">
+                      {% endif %}
+                     </li>            
+               {% endfor %}
+
                   </ul>
 
           </ul>

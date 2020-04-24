@@ -60,6 +60,17 @@ $map->post('addProjects','/Proyecto_php/projects/add',[
     'action' => 'getAddProjectsAction'
 ]);
 
+$map->get('saveUser','/Proyecto_php/users/add',[
+    'controller'=> 'app\Controllers\UsersController',
+    'action' => 'getAddUsersAction'
+]);
+
+$map->post('addUser','/Proyecto_php/users/add',[
+    'controller'=> 'app\Controllers\UsersController',
+    'action' => 'getAddUsersAction'
+]);
+
+
 
 
 

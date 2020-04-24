@@ -10,12 +10,14 @@
    </div>
   {% endif %}
 
-       <form action="/Proyecto_php/jobs/add" method="POST">
+       <form action="/Proyecto_php/jobs/add" method="POST" enctype = "multipart/form-data">
            <label>Title: </label>
            <input type="text" name="txt_title"><br>
            <label>Description: </label>
            <input type="text" name="txt_description"><br>
+            <input type="file" name="logo"><br><br>
            <button type="submit">Save</button>
+
        </form>  
 {% endblock %}
 

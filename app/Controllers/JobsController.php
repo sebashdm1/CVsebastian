@@ -23,11 +23,23 @@ class JobsController extends BaseController
 
              try {
 	                $jobValidator->assert($postData);
+
+                    $files=$request->getUploadedFiles();
+                    $logo = $files['logo'];
+
+                    if($logo->getError() == UPLOAD_ERR_OK)
+                    	{
+                    		$fileName = $logo->getClientFilename();
+                    		$logo->moveTo("uploads/$fileName");
+                    	}
+
 					$job = new job();
 					$job->title = $postData["txt_title"];
 					$job->Description = $postData["txt_description"];
+					$job->fileName
 					$job->Save();
 					$responseMessage = 'Job Saved';
+                    
             
              } catch(\Exception $e){
                    $responseMessage ="NO ENVIAR DATOS VACIOS";
