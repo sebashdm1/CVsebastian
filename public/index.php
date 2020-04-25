@@ -5,6 +5,9 @@ ini_set('display_starup_error',1);
 error_reporting(E_ALL); //...............PARA INICIALIZAR ERRORES !! 
 
 require_once '../vendor/autoload.php';
+
+session_start();
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
 
@@ -70,8 +73,26 @@ $map->post('addUser','/Proyecto_php/users/add',[
     'action' => 'getAddUsersAction'
 ]);
 
+$map->get('loginForm','/Proyecto_php/login',[
+    'controller'=> 'app\Controllers\AuthController',
+    'action' => 'getLogin'
+]);
 
+$map->get('logout','/Proyecto_php/logout',[
+    'controller'=> 'app\Controllers\AuthController',
+    'action' => 'getLogout'
+]);
 
+$map->post('auth','/Proyecto_php/auth',[
+    'controller'=> 'app\Controllers\AuthController',
+    'action' => 'postLogin'
+]);
+
+$map->get('admin','/Proyecto_php/admin',[
+    'controller'=> 'app\Controllers\AdminController',
+    'action' => 'getIndex',
+    'auth' => true
+]);
 
 
 
@@ -127,10 +148,24 @@ if(!$route){
     $handlerData = $route->handler;
     $controllerName = $handlerData['controller'];
     $actionName = $handlerData['action'];
+    $needsAuth = $handlerData['auth'] ?? false;
+
+    $sessionUserCedula  = $_SESSION['cedula'] ?? null;
+    if( $needsAuth && !$sessionUserCedula){
+       header('location: /Proyecto_php/login');
+      die;
+    }
 
     $controller = new  $controllerName;
     $response = $controller->$actionName($request);
 
+    foreach ($response->getHeaders() as $name => $values) {
+      
+          foreach ($values as $value) {
+            header(sprintf('%s: %s',$name ,$value), false); 
+          }
+    }
+    http_response_code($response->getStatusCode());
     echo $response->getBody();
     
 }

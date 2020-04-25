@@ -36,7 +36,7 @@ class JobsController extends BaseController
 					$job = new job();
 					$job->title = $postData["txt_title"];
 					$job->Description = $postData["txt_description"];
-					$job->fileName
+					$job->fileName;
 					$job->Save();
 					$responseMessage = 'Job Saved';
                     
