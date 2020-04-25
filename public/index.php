@@ -8,15 +8,18 @@ require_once '../vendor/autoload.php';
 
 session_start();
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
 
 $capsule = new Capsule;
 $capsule->addConnection([
     'driver'    => 'mysql',
-    'host'      => 'localhost',
-    'database'  => 'portafoliodb',
-    'username'  => 'root',
+    'host'      => getenv('DB_HOST'),
+    'database'  => getenv('DB_NAME'),
+    'username'  => getenv('DB_USER'),
     'password'  => '',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
